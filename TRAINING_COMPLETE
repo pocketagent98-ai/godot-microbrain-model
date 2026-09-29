@@ -1,0 +1,5 @@
+ok
+GPU=Tesla T4
+examples=6000
+split=none
+adapter_verified=yes

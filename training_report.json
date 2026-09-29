@@ -1,0 +1,29 @@
+{
+  "GPU": "Tesla T4",
+  "CUDA": "12.8",
+  "PyTorch": "2.8.0+cu128",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "dataset": "public_dataset/godot_microbrain_v1 (12 shards concat, numeric order)",
+  "dataset_count": 6000,
+  "split": "NONE \u2014 trained on all 6000 (user spec 28-09)",
+  "epochs": 10,
+  "learning_rate": 0.0002,
+  "batch_size": "8 x 8 grad-accum (effective 64)",
+  "precision": "FP16 (BF16 disabled \u2014 T4)",
+  "LoRA": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target": "all-linear"
+  },
+  "final_train_loss": 0.19281517267227172,
+  "loss_curve_logged_points": 40,
+  "training_duration_min": 28.1,
+  "adapter_saved": true,
+  "tokenizer_saved": true,
+  "demo_generations": [
+    " {\"action\":\"tool_call\",\"tool\":\"api_manage\",\"args\":{\"operation\":\"query_nodes\"}}<|im_end|>",
+    " {\"action\":\"tool_call\",\"tool\":\"build\",\"args\":{\"project_path\":\"res://main.tg\",\"node_type\":\"project\",\"node_name\":\"GameThread\"}}<|im_end|>"
+  ],
+  "output_path": "/teamspace/studios/this_studio/smollm2-godot-microbrain"
+}
